@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: syncyomi
+    env: docker
+    plan: free
+    region: singapore   # hoặc region bạn muốn
+    disk:
+      name: sy-config
+      mountPath: /config   # trùng với Dockerfile
+      sizeGB: 1
+    envVars:
+      - key: TZ
+        value: Asia/Ho_Chi_Minh
+    healthCheckPath: /
