@@ -2,7 +2,7 @@ services:
   - type: web
     name: syncyomi
     env: docker
-    plan: free
+    plan: starter
     region: singapore   # hoặc region bạn muốn
     disk:
       name: sy-config
